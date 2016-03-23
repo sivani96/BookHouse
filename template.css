@@ -1,0 +1,44 @@
+#header
+{
+	font:bolder normal small-caps;
+	color:white;
+	/*background:#00008B url("logo.jpg") no-repeat;*/
+	/*background-position:top-left;*/
+	background:#00008B;
+	font-size:25px;
+	text-align:center;
+	height:80%;
+	border:1px solid black;
+	text-align:center;
+	margin:0 0 0 0;
+}
+#logo
+{
+	background:#00008B;
+	float:left;
+}
+#menu
+{
+	text-align:center;
+	background:#40E0D0;
+	font-size:18px;
+	height:20%;
+	border:1px solid black;
+	margin:0 0 0 0;
+} 
+#groups
+{
+	text-align:center;
+	background:#00008B;
+	color:white;
+	border:2px solid black;
+	margin:0;
+}
+#body
+{
+	text-align:center;
+	background:#FFF8DC;
+	color:black;
+	font-size:20px;
+	line-height:1.5;
+}

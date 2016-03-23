@@ -1,0 +1,76 @@
+
+
+<html>
+	<head>
+		<title>Login form</title>
+		<link rel="stylesheet" type="text/CSS" href="template.css"/>
+		<script>
+			function uval(u)
+			{
+				var upat=/^[a-zA-Z]{6,15}$/;
+				return upat.test(u);
+			}
+			function pval(p)
+			{
+				var ppat=/^[a-zA-Z0-9]{8,20}$/;
+				return ppat.test(p);
+			}
+			function validate()
+			{
+				var a=log.uname.value;
+				var b=log.pwd.value;
+				if(a==""||a==null)
+				{
+					document.getElementById("user").innerHTML="enter user name";
+					return false;
+				}
+				else if(!uval(a))
+				{
+					document.getElementById("user").innerHTML="enter valid user name";
+					return false;
+				}
+				else
+				{
+					document.getElementById("user").innerHTML="";
+				}
+	
+				if(b==""||b==null)
+				{
+					document.getElementById("pass").innerHTML="enter password";
+					return false;
+				}
+				else if(!pval(b))
+				{
+					document.getElementById("pass").innerHTML="enter valid password";
+					return false;
+				}
+				else
+				{
+					document.getElementById("pass").innerHTML="";
+					return true;
+				}
+				
+			}
+		</script>
+	</head>
+	<body id="body">
+		<table>
+			<form method="post" name="log" action="wel.html">
+				<tr>
+					<td>Username:</td>
+					<td><input type="text" name="uname"/></td>
+					<td><p style="color:red" id="user"></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" name="pwd"/></td>
+					<td><p style="color:red" id="pass"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="sub" value="SUBMIT" onclick="return validate()"/>
+					<td><input type="reset" name="res" value="RESET"/>
+				</tr>
+			</form>
+		</table>
+	</body>
+</html>
